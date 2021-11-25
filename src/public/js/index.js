@@ -1,3 +1,7 @@
+// import '../css/index.less';
+
+import '../css/index.scss';
+
 console.log('index.js');
 
 window.addEventListener('DOMContentLoaded', () => {

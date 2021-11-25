@@ -7,6 +7,9 @@
     "start": "parcel --open",
     "build": "parcel build"
   },
+  "browserslist": [
+    "last 3 versions"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yelban/new-era-js-fullstack-startkit.git"
@@ -22,12 +25,16 @@
     "the-new-css-reset": "^1.4.1"
   },
   "devDependencies": {
+    "@parcel/transformer-less": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
+    "autoprefixer": "^10.4.0",
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "parcel": "^2.0.1",
+    "postcss": "^8.4.1",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-order": "^5.0.0"
   }

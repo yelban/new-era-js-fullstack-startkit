@@ -1,0 +1,42 @@
+// @import "../../../node_modules/the-new-css-reset/css/reset.css";
+@import "the-new-css-reset";
+
+$body-background-color: #F5F5F5;
+$todolist-wrapper-background-color: #FFF;
+$border-color: #E0E0E0;
+
+html,
+body {
+  font-size: 20px;
+  font-family: "Helvetica Neue", helvetica, arial, "Lucida Grande", "LiHei Pro", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "微软雅黑", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  color: #505050;
+  background-color: $body-background-color;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  .todolist-wrapper {
+    /* border: 1px solid gray; */
+    margin: 0 auto;
+    width: 90%;
+    background-color: $todolist-wrapper-background-color;
+    box-shadow: 1px 1px 5px 0 rgb(0 0 0 / 75%);
+
+    .new-todo {
+      padding: 16px;
+      width: 100%;
+
+      /* border: 1px solid red; */
+      font-size: 24px;
+      font-weight: 300;
+
+      /* border: none; */
+      border-bottom: 1px solid $border-color;
+
+      /* outline: none; */
+    }
+  }
+}

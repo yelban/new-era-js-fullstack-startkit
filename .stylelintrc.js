@@ -13,6 +13,7 @@ module.exports = {
                 "/font.*/"
             ]
         }],
+        "scss/at-rule-no-unknown": null,
         "order/order": [
             "custom-properties",
             "declarations"
