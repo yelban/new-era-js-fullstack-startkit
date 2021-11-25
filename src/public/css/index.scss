@@ -1,13 +1,20 @@
 // @import "../../../node_modules/the-new-css-reset/css/reset.css";
 @import "the-new-css-reset";
+@import "bootstrap/scss/bootstrap";
 @import "variables";
 
 html,
 body {
   font-size: 20px;
   font-family: "Helvetica Neue", helvetica, arial, "Lucida Grande", "LiHei Pro", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "微软雅黑", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  color: #505050;
+  color: $font-color;
   background-color: $body-background-color;
+
+  .header-image {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+  }
 
   h1 {
     font-size: 60px;
@@ -45,11 +52,35 @@ body {
 
         .custom-checkbox {
           position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-left: 15px;
           width: 30px;
           height: 30px;
           border: 1px solid $checkbox-border-color;
           border-radius: 5px;
+
+          svg {
+            display: none;
+          }
+
+          .real-checkbox {
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            cursor: pointer;
+          }
+        }
+
+        &.done .custom-checkbox svg {
+          display: block;
+          width: 23px;
+          height: 23px;
+          color: $checkbox-icon-color;
         }
 
         label {
@@ -61,7 +92,27 @@ body {
 
           /* border: 1px solid gray; */
         }
+
+        .delete {
+          margin-right: 10px;
+          width: 30px;
+          height: 30px;
+          background: url("../assets/pic/delete.png") center no-repeat;
+          background-size: 90%;
+          visibility: hidden;
+          cursor: pointer;
+        }
+
+        &:hover .delete {
+          visibility: visible;
+        }
       }
     }
+  }
+
+  .alert {
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
