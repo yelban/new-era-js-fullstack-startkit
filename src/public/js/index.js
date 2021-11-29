@@ -11,6 +11,9 @@ import {
   toggleTodoEventHandler,
   alertDeleteTodoEventHandler,
 } from './event-handlers';
+
+import { isProduction } from './env-check';
+
 import '../css/index.scss';
 
 console.log('index.js');
@@ -49,3 +52,9 @@ document.getElementById('alert-delete-button').addEventListener('click', (event)
 
   alertDeleteTodoEventHandler(event.target);
 });
+
+if (isProduction()) {
+  console.log('is production');
+} else {
+  console.log('is not production');
+}

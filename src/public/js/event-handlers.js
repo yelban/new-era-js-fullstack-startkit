@@ -1,5 +1,5 @@
 import { Modal } from 'bootstrap/dist/js/bootstrap.esm.min';
-
+import { capitalize } from 'lodash-es';
 import {
   renderTodos, clearNewTodoInput, getTodoId, showAlert,
 } from './view';
@@ -15,9 +15,9 @@ function trim(value) {
   return value.trim();
 }
 
-function capitalize(value) {
-  return value.charAt(0).toUpperCase() + value.substring(1);
-}
+// function capitalize(value) {
+//   return value.charAt(0).toUpperCase() + value.substring(1);
+// }
 
 export function newTodoEventHandler(event) {
   // console.log(event);
